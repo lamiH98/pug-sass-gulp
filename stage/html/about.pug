@@ -1,0 +1,49 @@
+extends pug/layout/master_layout.pug
+include pug/mixins/breadcrumb.pug
+
+block content
+	+breadcrumb('About Us')
+
+	section.about-us 
+		.container 
+			.row 
+				.col-md-6 
+					.about-img 
+						img(src="../images/food/food-item-6.jpg", alt="")
+						.experiense
+							h6.about-num 17
+							h5.text-center Years
+							h5.text-center Experiense
+				.col-md-6 
+					.about-details 
+						h2.about-title We are doing more than you expect 
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores autem quae quas illum possimus, eos maiores doloribus consequatur maxime recusandae, nisi molestiae eum? Molestiae quae exercitationem labore enim accusantium et!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores autem quae quas illum possimus, eos maiores doloribus consequatur maxime recusandae, nisi molestiae eum? Molestiae quae exercitationem labore enim accusantium et!
+						
+	// Start Food Item
+	include pug/components/food.pug
+	// End Food Item
+
+	// Start Video
+	section.video 
+		.container 
+			.row 
+				.col-lg-6 
+					.video-content
+						spna.promo Promo Video 
+						h2 Restaurant is like a theater.
+						h2 Our task is to amaze you!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia praesentium voluptatem ratione corporis voluptatibus, laboriosam harum non?
+						a(href="https://www.youtube.com/watch?v=4okfF6k_m-A" data-lity='data-lity' class="btn") #[i.fas.fa-video] Promo Video
+
+				.col-lg-6
+					.video-img
+						img(src="../images/video/video.jpg", alt="")
+						.video-icon
+							a(href='https://www.youtube.com/watch?v=4okfF6k_m-A' data-lity='data-lity')
+								i.fas.fa-play
+	// End Video
+	
+	// Start Testimonial
+	include pug/components/testimonial.pug
+	// End Testimonial

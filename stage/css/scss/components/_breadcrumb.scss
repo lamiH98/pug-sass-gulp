@@ -1,0 +1,15 @@
+.breadcrumb-section{
+    margin-top: 40px;
+    .breadcrumb{
+        li{
+            font-size: 14px;
+            a{
+                color: #555;
+                transition: 0.5s;
+                &:hover{
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}

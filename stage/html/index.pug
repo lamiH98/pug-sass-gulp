@@ -1,0 +1,196 @@
+extends pug/layout/master_layout.pug
+
+block content
+
+  // Start Header
+  header
+      .container
+        .row
+          .col-md-6
+            .header-content
+              h1.text-capitalize We do not #[span cook], we create your #[span emotions!]
+                i.fa-solid.fa-circle-check
+              p.header-text Consectetur numquam poro nemo veniam eligendi rem adipisci quo modi.
+              .counter
+                .counter-item
+                  span.counter-num 24+
+                  p.counter-title 24/7 Support
+                .counter-item
+                  span.counter-num 365+
+                  p.counter-title Fresh Food
+                .counter-item
+                  span.counter-num 60+
+                  p.counter-title Fast Delivery
+          .col-md-6
+            .header-img
+              //- img.img-fluid(src='../images/hero-1.jpg' alt='header-image')
+              .owl-header.owl-carousel.owl-theme
+                .item: img(src='../images/hero-1.jpg' alt='header-image')
+                .item: img(src='../images/hero-2.jpg' alt='header-image')
+                .item: img(src='../images/hero-3.jpg' alt='header-image')
+
+  // End Header
+
+  // Start Services
+  section.services 
+    .container 
+      .row 
+        .col-lg-6 
+          .service-img 
+            img(src='../images/hero-2.jpg' alt='header-image')
+
+        .col-lg-6 
+          .service-content 
+            h2.service-title We are doing more than you expect
+            .service-item 
+              span.float-start 01
+              h4 We are located in the city center
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde praesentium quis ex, consectetur commodi quibusdam 
+            .service-item 
+              span.float-start 02
+              h4 Fresh, organic ingredients
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde praesentium quis ex, consectetur commodi quibusdam 
+            .service-item 
+              span.float-start 03
+              h4 Own fast delivery
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde praesentium quis ex, consectetur commodi quibusdam 
+  // End Services
+
+  // Start Foods
+  include pug/components/food.pug
+  // End Foods
+
+  // Start special
+  section.special
+    .container 
+      .row 
+        .col-md-12 
+          .title-section.text-center 
+            h6.subtitle Specialties
+            h2.title Special Dishes
+      .special-item 
+        .row 
+          .col-md-5 
+            .special-img: img(src='../images/steak.jpg' alt='header-image')
+          .col-md-7
+            .special-content
+              .number: span 01.
+              h5 Beef
+              h4 Steak Sauce
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum necessitatibus tempora consequuntur voluptatibus expedita aspernatur ea, enim aliquid quidem laborum vel porro optio veniam ipsum autem. Deserunt maiores repudiandae tenetur eveniet officiis excepturi aliquid, inventore veritatis possimus aut earum. Velit deleniti fugiat accusamus, ex quas adipisci ratione eum similique odit.
+              h6.price $15.00
+              a(href="#" class="btn") Book Now
+      .special-item 
+        .row 
+          .col-md-7 
+            .special-content 
+              .number: span 02.
+              h5 Beef
+              h4 Steak Sauce
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum necessitatibus tempora consequuntur voluptatibus expedita aspernatur ea, enim aliquid quidem laborum vel porro optio veniam ipsum autem. Deserunt maiores repudiandae tenetur eveniet officiis excepturi aliquid, inventore veritatis possimus aut earum. Velit deleniti fugiat accusamus, ex quas adipisci ratione eum similique odit.
+              h6.price $15.00
+              a(href="#" class="btn") Book Now
+          .col-md-5
+            .special-img: img(src='../images/salmon-zucchini.jpg' alt='header-image')
+      .special-item 
+        .row 
+          .col-md-5
+            .special-img: img(src='../images/testi-bg.jpg' alt='header-image')
+          .col-md-7 
+            .special-content 
+              .number: span 03.
+              h5 Beef
+              h4 Steak Sauce
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum necessitatibus tempora consequuntur voluptatibus expedita aspernatur ea, enim aliquid quidem laborum vel porro optio veniam ipsum autem. Deserunt maiores repudiandae tenetur eveniet officiis excepturi aliquid, inventore veritatis possimus aut earum. Velit deleniti fugiat accusamus, ex quas adipisci ratione eum similique odit.
+              h6.price $15.00
+              a(href="#" class="btn") Book Now
+  // End special
+
+
+  // Start Team
+  section.team
+    .container
+      .row
+        .col-md-12
+          .title-section
+            h2.title They will cook for you
+            p.description We are a passionate digital design agency that specializes in beautiful and easy-to-use digital design &amp; web development services.
+      .row
+        -
+          let teams = [
+            { 'img': '../images/team/team1.jpg', 'name': 'Alex Smith', 'job': 'Chef'},
+            { 'img': '../images/team/team2.jpg', 'name': 'Justina Tina', 'job': 'Assistant chef'},
+            { 'img': '../images/team/team3.jpg', 'name': 'Alex Smith', 'job': 'Chef'},
+            { 'img': '../images/team/team2.jpg', 'name': 'Thorley Ray', 'job': 'Assistant chef'}
+          ]
+        each val in teams.length ? teams : ['There are no values']
+          .col-md-4.col-lg-3
+            .team-single.text-center
+              .team-img
+                img(src=val.img alt='')
+              .team-details
+                a(href='#'): h5= val.name
+                span #{val.job}
+              ul.list-unstyled.icon
+                li
+                  a(href='#')
+                    i.fab.fa-facebook
+                li
+                  a(href='#')
+                    i.fab.fa-twitter
+                li
+                  a(href='#')
+                    i.fab.fa-instagram
+                li
+                  a(href='#')
+                    i.fab.fa-linkedin
+  // End Team
+
+  // Start Testimonial
+  include pug/components/testimonial.pug
+  // End Testimonial
+
+  // Start Popular Food
+  section.popular-foods
+    .container 
+      .row 
+        .col-md-12 
+          .title-section 
+            h2.title Most Popular Food
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corporis rem praesentium?
+      
+      .row 
+        -
+          let popularFoods = [
+            { 'img': '../images/food/food-item-6.jpg', 'title': 'Burger King', 'price': 15, 'rating': 4},
+            { 'img': '../images/food/food-item-3.jpg', 'title': 'Popeyes', 'price': 9, 'rating': 5},
+            { 'img': '../images/food/food-item-4.jpg', 'title': 'KFC', 'price': 18, 'rating': 3},
+            { 'img': '../images/food/food-item-5.jpg', 'title': 'Chevrefrit au miel', 'price': 11, 'rating': 5},
+            { 'img': '../images/food/food-item-6.jpg', 'title': 'Chevrefrit au miel', 'price': 62, 'rating': 4},
+          ]
+
+        each val in popularFoods.length ? popularFoods : ['there are no values']
+          .col-md-4 
+            .popular-food
+              .popular-food-img 
+                img(src=val.img alt="food-img")
+              .popular-head
+                a(href=""): h4.popular-title= val.title  
+                span.price $#{val.price}
+              p.details  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, quos tenetur ducimus est suscipit quidem.
+              .rating
+                - for(let i = 0; i < val.rating; i++)
+                  i.fas.fa-star
+  // End Popular Food
+
+  // Start Discount
+  section.discount 
+    .container
+      .row 
+        .col-md-6 
+          h2.discount-title -50% Discount for all burgers
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa iure culpa corrupti iusto velit voluptatibus?
+          a(href="#" class="btn") Get It Now
+        .col-md-6 
+          .discount-img: img(src="../images/food/burger.png", alt="")
+  // End Discount

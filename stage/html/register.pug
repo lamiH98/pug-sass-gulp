@@ -1,0 +1,56 @@
+extends pug/layout/master_layout.pug
+include pug/mixins/breadcrumb.pug
+
+block content
+
+	// Start Breadcrumb
+	+breadcrumb('Register')
+	// End Breadcrumb
+
+	// Start Account
+	section.account 
+		.container 
+			.row 
+				.col-lg-5
+					.login-img
+						img(src="../images/account/account.png", alt="")
+				.col-lg-7
+					.account-form 
+						h2.text-start Sign 
+							span Up
+						form(action="" class='custom-form') 
+							input(type="text" class="form-control" placeholder="Your name")
+							input(type="text" class="form-control" placeholder="email")
+							input(type="text" class="form-control" placeholder="Password")
+							.remember.text-start
+								input(type="checkbox", name="remember", id="remember")
+								label(for="remember") Remember Me
+							.login-btn.text-start
+								a(href="" class="btn") Register
+	// End Account
+
+	// Start Or
+	section.or-section
+		.container 
+			.row 
+				.col-md-6 
+				.col-md-6 
+					.text-center.social-or OR
+	// End Or
+
+	// Start Social Link
+	section.social-link 
+		.container 
+			.row
+				.col-md-6
+				.col-md-6
+					.row 
+						.col-md-6 
+							a(href="" class="google-sign")
+								img(src="../images/account/google.png", alt="")
+								span Sign up with google
+						.col-md-6 
+							a(href="" class="facebook-sign")
+									img(src="../images/account/facebook.png", alt="")
+									span Sign up with facebook
+	// End Social Link

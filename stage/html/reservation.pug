@@ -1,0 +1,68 @@
+extends pug/layout/master_layout.pug
+include pug/mixins/breadcrumb.pug
+
+block content
+
+	// Start Breadcrumb
+	+breadcrumb('Reservation')
+	// End Breadcrumb
+
+	// Start Reservation
+	section.reservation
+		.container 
+			.row 
+				.col-lg-6
+					.reservation-detals
+						span Reservation
+						h2.reservation-title Mmm...! Your evening will be great!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, velit vel sequi dignissimos consectetur veniam voluptatibus nostrum optio consequuntur atque!
+				.col-lg-6
+					.reservation-form 
+						form(action="send" method="POST" class='custom-form') 
+							input(type="text" class="form-control" placeholder="Name")
+							input(type="text" class="form-control" placeholder="Email")
+							input(type="text" class="form-control" placeholder="Phone")
+							.row 
+								.col-md-6
+									select.form-select(aria-label='Default select example')
+										option(selected='') Select Person
+										- for(let i = 1; i <= 10; i++)
+											option(value=i) #{i}
+
+								.col-md-6 
+									select.form-select(aria-label='Default select example')
+										option(selected='') Select Time
+										option(value='10') 10:00 AM
+										option(value='11') 11:00 AM
+										option(value='12') 12:00 AM
+										- for(let i = 1; i <= 10; i++)
+											option(value=i) #{i} PM
+							a(href="" class="btn") Reserve Now
+	// End Reservation
+
+	// Start Contact
+	section.contact
+		.container
+			.row
+				.col-lg-4.col-md-6
+					.contact-single
+						.contact-num
+							span 01
+						.contact-content
+							h4 location
+							p You'll look at graphs and charts in Task One
+				.col-lg-4.col-md-6
+					.contact-single
+						.contact-num
+							span 02
+						.contact-content
+							h4 Phone
+							p (90) 277 278 2566
+				.col-lg-4.col-md-6
+					.contact-single
+						.contact-num
+							span 03
+						.contact-content
+							h4 Email
+							p jacson767@gmail.com
+	// End Contact

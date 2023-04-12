@@ -1,0 +1,63 @@
+extends pug/layout/master_layout.pug
+include pug/mixins/breadcrumb.pug
+
+block content
+
+	// Start Breadcrumb
+	+breadcrumb('Gallery')
+	// End Breadcrumb
+
+	section.gallery-title 
+		.container 
+			.row 
+				.col-md-6 
+					h2 Gallery
+					p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio deserunt, provident quibusdam sunt, nemo veritatis et modi debitis dolor culpa nulla architecto eum incidunt sequi in quas quae cumque nesciunt?
+
+	// Start Gallery
+	section.gallery
+		.container-fluid
+			.row
+				.col-lg-4.col-sm-6
+					.dh-container
+						img(src='../images/food/food-item-2.jpg' alt='')
+						.dh-overlay
+							h3.text-uppercase muscle gaining
+							a.view(href='#')
+								i.fas.fa-plus
+				.col-lg-4.col-sm-6
+					.dh-container
+						img(src='../images/food/food-item-3.jpg' alt='')
+						.dh-overlay
+							h3.text-uppercase muscle gaining
+							a.view(href='#')
+								i.fas.fa-plus
+				.col-lg-4.col-sm-6
+					.dh-container
+						img(src='../images/food/food-item-5.jpg' alt='')
+						.dh-overlay
+							h3.text-uppercase muscle gaining
+							a.view(href='#')
+								i.fas.fa-plus
+				.col-lg-3.col-sm-6
+					.dh-container
+						img(src='../images/food/food-item-6.jpg' alt='')
+						.dh-overlay
+							h3.text-uppercase muscle gaining
+							a.view(href='#')
+								i.fas.fa-plus
+				.col-lg-3.col-sm-6
+					.dh-container
+						img(src='../images/food/food-item-2.jpg' alt='')
+						.dh-overlay
+							h3.text-uppercase muscle gaining
+							a.view(href='#')
+								i.fas.fa-plus
+				.col-lg-6.col-sm-6
+					.dh-container
+						img(src='../images/food/food-item-6.jpg' alt='')
+						.dh-overlay
+							h3.text-uppercase muscle gaining
+							a.view(href='#')
+								i.fas.fa-plus
+	// End Gallery

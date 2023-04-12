@@ -1,0 +1,94 @@
+
+
+/**********************************
+        Start Footer 
+**********************************/
+footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 80px;
+    font-family: "Josefin Sans", sans-serif;
+    .social-link{
+        margin-top:6px;
+        a{
+            display:inline-block;
+            font-size:15px;
+            color:$textColor !important;
+            height:40px;
+            width:40px;
+            background:rgba(197, 15, 15, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            margin-right:10px;
+            i{
+                line-height:40px !important
+            }
+        }
+    }
+    .footer-top{
+        .logo{
+            a{
+                color: $mainColor;
+                font-weight: bold;
+                font-size: 40px;
+                padding-left: 20px;
+            }
+        }
+    }
+    .footer-down{
+        padding-top: 40px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        .footer-logo{
+            h2{
+                color:#fff;
+            }
+            p{
+                margin-top: 26px;
+                color: $textColor;
+            }
+        }
+        h5{
+            margin-bottom: 28px;
+            color:$textColor;
+        }
+        ul{
+            li{
+                margin-bottom: 10px;
+                a{
+                    color:$textColor !important;
+                }
+            }
+        }
+        p{
+            color:$textColor;
+        }
+        form{
+            input{
+                display: inline-block !important;
+                width: 85% !important;
+                background: none !important;
+            }
+            button{
+                float :right;
+                width: 50px;
+                height: 38px;
+                background:#00BFE7;
+                color:#fff;
+                border: none;
+            }
+        }
+    }
+    .footer-section-tow{
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid #1f2024;
+        i{
+            color:red;
+        }
+        p{
+            color:$textColor;
+        }
+    }
+}
+
+footer .footer-down form .form-control:focus{border-color:none}

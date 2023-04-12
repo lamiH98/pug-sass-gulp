@@ -1,0 +1,59 @@
+.reservation{
+    margin-top: 50px;
+    .reservation-detals{
+        span{
+            display: inline-block;
+            padding: 2px 5px;
+            background-color: #f2f3f5;
+            color: #231e41;
+            font-size: 12px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .reservation-title{
+            font-size: 54px;
+            color: $textColor;
+            width: 85%;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+        }
+        p{
+            width: 80%;
+            color: #6f6f87;
+        }
+    }
+    .reservation-form{
+        position: relative;
+        background-color: #f8f8f8;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 0 8px -2px rgb(0 0 0 / 10%);
+    }
+}
+
+.contact{
+    margin-top: 120px;
+    .contact-single{
+        margin-bottom: 40px;
+        .contact-num{
+            span{
+                float: left;
+                width: 60px;
+                height: 60px;
+                font-size: 50px;
+                margin-right: 30px;
+                color: #fb4141;
+                font-family: Monoton,cursive;
+            }
+        }
+        .contact-content{
+            font-family: "Roboto Condensed", sans-serif;
+            margin-left: 80px;
+            color: $textColor;
+            p{
+                margin-bottom:8px
+            }
+        }
+    }
+}

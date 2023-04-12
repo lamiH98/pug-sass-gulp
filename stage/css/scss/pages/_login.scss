@@ -1,0 +1,22 @@
+.account{
+    margin-top: 80px;
+    .login-img{
+        img{
+            width: 100%;
+        }
+    }
+    .account-form{
+        background-color: transparent;
+        padding: 30px;
+        box-shadow: 0 0 8px -2px rgb(0 0 0 / 10%);
+        form{
+            border: none;
+            .form-control{
+                border-radius: 50px;
+                &:focus{
+                    border-color: $mainColor;
+                }
+            }
+        }
+    }
+}

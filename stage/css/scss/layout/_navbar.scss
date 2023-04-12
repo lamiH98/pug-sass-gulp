@@ -1,0 +1,53 @@
+.navbar{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    min-height: 70px;
+    .navbar-brand{
+        color: $mainColor;
+        font-weight: bold;
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    .navbar-nav{
+        .nav-link{
+            color: #222;
+            font-size: 15px;
+            text-transform: capitalize;
+            font-weight: bold;
+            @include prefixer(transition, all .3s ease, webkit moz o);
+            &:hover{
+                color: $mainColor;
+            }
+        }
+    }
+    
+    .active{
+        color: $mainColor !important;
+    }
+}
+.navbar-bg{
+    background: #fff;
+    @include prefixer(box-shadow, 0px 10px 40px rgba(0, 0, 0, 0.05), webkit moz o);
+    padding: 0;
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    @include prefixer(transform, translateY(100px), webkit moz o);
+    @include prefixer(transition, transform .5s ease, webkit moz o);
+}
+
+.navbar-img-bg .navbar-nav .nav-link{
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-collapse{
+    justify-content: space-evenly;
+}
+
+button:focus:not(:focus-visible){
+    box-shadow: none;
+}

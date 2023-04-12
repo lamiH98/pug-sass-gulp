@@ -1,0 +1,48 @@
+extends pug/layout/master_layout.pug
+include pug/mixins/breadcrumb.pug
+
+block content
+
+	// Start Breadcrumb
+	+breadcrumb('Contact')
+	// End Breadcrumb
+
+	// Start Contact
+	section.contact 
+		.container 
+			.row 
+				.col-md-6
+					.contact-detals
+						span Contact
+						h2.contact-title Mmm...! Your evening will be great!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, velit vel sequi dignissimos consectetur veniam voluptatibus nostrum optio consequuntur atque!
+				.col-md-6
+					.account-form 
+						h2.text-start Send #[span Message]
+						form(action="" class='custom-form') 
+							input(type="text" class="form-control" placeholder="Your name")
+							input(type="text" class="form-control" placeholder="Email")
+							textarea(placeholder="Your Message" class="form-control")
+							a(href="" class="btn") Send
+	// End Contact
+
+	
+	// Start Contact Info
+	section.contact-info
+		.container
+			.row
+				-
+					let contactInfos = [
+						{'num': '01', 'title': 'Location', 'details': "Los Angeles California USA"},
+						{'num': '02', 'title': 'Phone', 'details': '(90) 277 278 2566'},
+						{'num': '03', 'title': 'Email', 'details': 'jacson767@gmail.com'}
+					]
+				each val in contactInfos.length ? contactInfos : ['There are no values']
+					.col-lg-4.col-md-6
+						.contact-info-single
+							.contact-info-num
+								span=val.num
+							.contact-info-content
+								h4=val.title
+								p=val.details
+	// End Contact

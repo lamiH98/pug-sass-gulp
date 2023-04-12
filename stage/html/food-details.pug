@@ -1,0 +1,108 @@
+extends pug/layout/master_layout.pug
+include pug/mixins/breadcrumb.pug
+
+block content
+	
+	// Start Breadcrumb
+	+breadcrumb('Menu')
+		<li class="breadcrumb-item active" aria-current="page">Food Name</li>
+	// End Breadcrumb
+	
+	// Start Food Details
+	section.food-details
+		.container 
+			.row 
+				.col-md-6 
+					.food-details-img 
+						img(src="../images/food/food-item-6.jpg", alt="")
+				.col-md-6 
+					.food-details-content
+						.food-details-head.d-flex.justify-content-between 
+							h5.food-name Сasserole
+							span.price $14.00
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, sint magnam obcaecati eaque in laudantium.
+						.food-details-footer.d-flex.justify-content-between 
+							.quantity 
+								a(href=""): span.minus.fa-solid.fa-minus
+								span.num 1
+								a(href=""): span.plus.fa-solid.fa-plus
+							a(href="" class="btn") Add To Cart
+						span.category Category: Main dishes
+	// End Food Details
+
+	// Start Food Info
+	section.food-info 
+		.container 
+			.row 
+				.col-md-12 
+					ul#pills-tab.nav.nav-pills.mb-3(role='tablist')
+						li.nav-item(role='presentation')
+							button#pills-home-tab.nav-link.active(data-bs-toggle='pill' data-bs-target='#pills-home' type='button' role='tab' aria-controls='pills-home' aria-selected='true') Additional information
+						li.nav-item(role='presentation')
+							button#pills-profile-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-profile' type='button' role='tab' aria-controls='pills-profile' aria-selected='false') Description
+					#pills-tabContent.tab-content
+						#pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-home-tab' tabindex='0')
+							.row 
+								.col-sm-12.col-md-6
+									.info-detilas.d-flex.justify-content-between
+										spna Numquam
+										span 1 pack
+								.col-sm-12.col-md-6
+									.info-detilas.d-flex.justify-content-between
+										spna Porro
+										span 2 pack
+								.col-sm-12.col-md-6
+									.info-detilas.d-flex.justify-content-between
+										spna Cupiditate
+										span 150g
+								.col-sm-12.col-md-6
+									.info-detilas.d-flex.justify-content-between
+										spna Facilis
+										span 1KG
+								.col-sm-12.col-md-6
+									.info-detilas.d-flex.justify-content-between
+										spna Adipisicing
+										span 500g
+								.col-sm-12.col-md-6
+									.info-detilas.d-flex.justify-content-between
+										spna Goluptatem
+										span 1 Teaspoon
+								.col-sm-12.col-md-6
+									.info-detilas.d-flex.justify-content-between
+										spna Dolorem obcaecati
+										span 3 Teaspoon
+								.col-sm-12.col-md-6
+									.info-detilas.d-flex.justify-content-between
+										spna Vel fuga
+										span 300g
+						#pills-profile.tab-pane.fade(role='tabpanel' aria-labelledby='pills-profile-tab' tabindex='0') Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque libero exercitationem maiores soluta rem magnam nostrum deleniti ipsa blanditiis quia recusandae mollitia voluptatem fugit ducimus numquam id ipsam quod sapiente, sed vel tempore, consectetur at vero laboriosam. Numquam rerum, praesentium fugit quas qui dolorem ipsa laborum voluptatum laudantium quaerat, blanditiis libero possimus unde non expedita! Assumenda molestias expedita mollitia veniam enim nesciunt architecto placeat deserunt harum quae. Mollitia vero temporibus corporis numquam, harum consequuntur nulla vitae explicabo sunt expedita aperiam.
+	// End Food Info
+
+	// Start Buy With
+	-
+		let buyWith = [
+			{ 'img': '../images/food/food-item-6.jpg', 'title': 'Burger King', 'price': 15, 'rating': 4},
+			{ 'img': '../images/food/food-item-3.jpg', 'title': 'Popeyes', 'price': 9, 'rating': 5},
+			{ 'img': '../images/food/food-item-4.jpg', 'title': 'KFC', 'price': 18, 'rating': 3},
+		]
+	section.buy-with 
+		.container 
+			.row 
+				.col-md-6 
+					.title-section 
+						h2 Buy with this product
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius qui quos mollitia, nobis maiores sequi.
+			.row 
+				each val in buyWith.length ? buyWith : ['there are no values']
+					.col-md-4 
+						.popular-food
+							.popular-food-img 
+								img(src=val.img alt="food-img")
+							.popular-head
+								a(href=""): h4.popular-title= val.title  
+								span.price $#{val.price}
+							p.details  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, quos tenetur ducimus est suscipit quidem.
+							.rating
+								- for(let i = 0; i < val.rating; i++)
+									i.fas.fa-star
+	// End Buy With

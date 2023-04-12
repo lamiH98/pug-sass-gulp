@@ -1,0 +1,32 @@
+section.testimonial
+	.container
+		.row 
+			.col-md-12 
+				.title-section 
+					h2.title What do you like today?
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corporis rem praesentium?
+		.row
+			-
+				let testimonials = [
+					{ 'img': '../images/team/team1.jpg', 'name': 'Alex Smith', 'title': 'Good Service'},
+					{ 'img': '../images/team/team2.jpg', 'name': 'Justina Tina', 'title': 'I have lunch here every day'},
+					{ 'img': '../images/team/team3.jpg', 'name': 'Alex Smith', 'title': 'Good Food'},
+					{ 'img': '../images/team/team2.jpg', 'name': 'Thorley Ray', 'title': "I will back"}
+				]
+			.owl-testimonial.owl-carousel.owl-theme
+				each val in testimonials.length ? testimonials : ['there are no values']
+					.client-single.item
+						.client-comment
+							i.fa.fa-quote-left
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem laboriosam quod unde debitis recusandae cum quibusdam harum. Quas, illo sint.
+							i.fas.fa-star
+							i.fas.fa-star
+							i.fas.fa-star
+							i.fas.fa-star
+							i.fas.fa-star
+						.client-details
+							.client-img
+								img(src=val.img alt='')
+							.client-info
+								h4=val.title
+								span= val.name

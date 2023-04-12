@@ -1,0 +1,21 @@
+.foods
+	.container
+		.row 
+			.col-md-12 
+				.title-section 
+					h2.title What do you like today?
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corporis rem praesentium?
+		.row 
+			-
+				let foodItems = [
+					{ 'img': '../images/icons/salad.png', 'name': 'Starters', 'subTitle': 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+					{ 'img': '../images/icons/fast-food.png', 'name': 'Main dishes', 'subTitle': 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+					{ 'img': '../images/icons/hot.png', 'name': 'Drinks', 'subTitle': 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+					{ 'img': '../images/icons/healthy-food.png', 'name': 'Healthy Food', 'subTitle': 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+				]
+			each val in foodItems.length ? foodItems : ['There are no values']
+				.col-md-6 
+					.food-item 
+						.food-img: img(src=val.img alt='food-img-1')
+						a(href="#"): h4=val.name 
+						span=val.subTitle

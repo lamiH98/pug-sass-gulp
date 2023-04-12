@@ -1,0 +1,48 @@
+.account{
+    h2{
+        font-weight: bold;
+        span{
+            color: $mainColor;
+        }
+    }
+}
+
+.or-section{
+    .social-or{
+        font-size: 23px;
+        position: relative;
+        font-weight: bold;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 2px;
+            background-color: #e6e6e6;
+            top: 18px;
+            right: -10px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 2px;
+            background-color: #e6e6e6;
+            top: 18px;
+            left: -60px;
+        }
+    }
+}
+
+.social-link{
+    margin-top: 50px;
+    .facebook-sign, .google-sign{
+        img{
+            width: 30px;
+            margin-right: 10px;
+        }
+        span{
+            font-size: 18px;
+            color: $textColor;
+        }
+    }
+}
